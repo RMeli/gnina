@@ -25,6 +25,9 @@ if(NOT ${CUDA_cublas_device_LIBRARY}) #workaround for oldercmake/newer cuda issu
 endif()
 
 find_package(ZLIB)
+find_package(BLAS)
+find_package(LAPACK)
+
 
 find_package(OpenBabel3 REQUIRED)
 #get_target_property(OPENBABEL_LIBRARIES openbabel LOCATION)
