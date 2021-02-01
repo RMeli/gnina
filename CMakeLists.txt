@@ -24,6 +24,8 @@ if(NOT ${CUDA_cublas_device_LIBRARY}) #workaround for oldercmake/newer cuda issu
  set(CUDA_cublas_device_LIBRARY "")
 endif()
 
+find_package(ZLIB)
+
 find_package(OpenBabel3 REQUIRED)
 #get_target_property(OPENBABEL_LIBRARIES openbabel LOCATION)
 set(OPENBABEL_LIBRARIES $<TARGET_FILE:openbabel>)
