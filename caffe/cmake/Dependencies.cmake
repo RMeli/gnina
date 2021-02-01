@@ -14,6 +14,12 @@ include_directories(SYSTEM ${Boost_INCLUDE_DIR})
 list(APPEND Caffe_INCLUDE_DIRS PUBLIC ${Boost_INCLUDE_DIRS})
 list(APPEND Caffe_LINKER_LIBS ${Boost_LIBRARIES} )
 
+find_package(ZLIB)
+find_package(BLAS)
+find_package(LAPACK)
+list(APPEND Caffe_INCLUDE_DIRS PUBLIC ${ZLIB_INCLUDE_DIRS})
+list(APPEND Caffe_LINKER_LIBS PUBLIC ${ZLIB_LIBRARIES} ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+
 # libmolgrid
 find_package(libmolgrid REQUIRED)
 include_directories($LIBMOLGRID_INCLUDE_DIR)

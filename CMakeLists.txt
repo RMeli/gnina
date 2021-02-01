@@ -28,7 +28,6 @@ find_package(ZLIB)
 find_package(BLAS)
 find_package(LAPACK)
 
-
 find_package(OpenBabel3 REQUIRED)
 #get_target_property(OPENBABEL_LIBRARIES openbabel LOCATION)
 set(OPENBABEL_LIBRARIES $<TARGET_FILE:openbabel>)
